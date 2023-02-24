@@ -1,0 +1,43 @@
+Répertoire électronique de clients de de produits.
+		
+
+Interface 0 : Mon épicerie : 3 boutons : “Gestion des personnes”, “Gestion des comptes” et “Gestion des Produits”
+Interface 1 : Gestion des personnes (classe : BienvenueInterface)
+Interface 2 : Gestion des comptes (classe GestionComptes)
+Interface 3 : Gestion des Produits (classe GestionProduits)
+Interface 4 : Préférence des clients (classe GestionProduitsFavoris)
+		
+		
+Interface 1:
+Cette interface contient un JTable qui permet d'afficher des listes différentes dépendant du rang sélectionné dans le dropdown menu (combo box). 
+Lorsqu’on clique sur une ligne, les informations de la personne qui est à cette ligne s'affichent à droite.  
+On peut chercher un individu par son nom ou la première lettre du nom avec l’espace / la barre de recherche.
+On peut également ajouter une personne/compte en cliquant sur le bouton "nouveau compte".
+		
+La création de compte se fait en deux étapes: 
+la vérification de que le nouveau compte a déjà été créé pour ne pas le faire deux fois, puis dans le cas échéant, une nouvelle fenêtre apparaît.
+Cette fenêtre nous permet d'entrer les informations du nouveau client et nous avertit si un champ est vide ou incorrect.
+La personne est donc ajoutée au répertoire, et apparaît dans le JTtable.
+Nous avons décidé de créer un numéro de compte, qui permettrait d’effectuer des  recherches plus efficaces.
+Le numéro de compte serait créé de façon automatique avec un code simple:
+Le premier chiffre représente le statut de la personne/compte :(client = 1, employé = 2, directeur = 3).
+Les derniers numéros représentent l’ordre dans lequel les comptes ont été créés (01, 02..).
+			
+Interface 2 : 
+Cette interface nous permet d’ajouter ou de retirer de l’argent à la personne sélectionnée dans le tableau (à l’exception du client, qui accepte juste des ajouts), ou bien de supprimer le compte.
+Le bouton Produits favoris de la personne ouvre une nouvelle interface (interface 4).
+		
+Interface 3 :
+Cette interface permet à un directeur, sélectionné à partir d’un combo box, d’ajouter ou d’enlever des produits disponibles.
+Lorsque le compte d’un directeur est supprimé, les produits restent quand même dans la liste de produits disponibles.
+	
+Interface 4:	
+Cette interface nous permet d'ajouter ou d'enlever des produits favoris à partir d’une liste de produits disponibles.
+
+
+
+Pour lancer l’application, on doit lancer le fichier Monmaine dans le package supermarketTest.
+Le flux d’information est conçu de façon centralisée. La classe Archive contient une liste de Personnes, une liste de 
+produits et une liste de suivi de changements. Nous avons traité les données à partir de ces trois listes et en les mettant à jour constamment. 
+
+	
