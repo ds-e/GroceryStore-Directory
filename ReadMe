@@ -1,5 +1,6 @@
-Répertoire électronique de clients de de produits.
-		
+Travail d'équipe
+
+Répertoire électronique de clients de de produits.		
 
 Interface 0 : Mon épicerie : 3 boutons : “Gestion des personnes”, “Gestion des comptes” et “Gestion des Produits”
 Interface 1 : Gestion des personnes (classe : BienvenueInterface)
